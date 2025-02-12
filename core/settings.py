@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+<<<<<<< HEAD
 import os
+=======
+>>>>>>> 309f14f (second_commit)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-$cbmqibt-u$=i9dj^ynd@1_p9r!q*)jn&24er^pc*dfsp4bi01'
+=======
+SECRET_KEY = 'django-insecure-5zpm0261cw8a=-s*m-n0so1(_+lsh@+s+vp*zd7rdex4w%_dj7'
+>>>>>>> 309f14f (second_commit)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'app'
+=======
+    'movie'
+>>>>>>> 309f14f (second_commit)
 ]
 
 MIDDLEWARE = [
@@ -56,7 +67,11 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
+=======
+        'DIRS': [BASE_DIR / 'templates'],
+>>>>>>> 309f14f (second_commit)
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,10 +132,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+<<<<<<< HEAD
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+=======
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+MEDIA_ROOT = 'media/'
+>>>>>>> 309f14f (second_commit)
 MEDIA_URL = '/media/'
 
 
