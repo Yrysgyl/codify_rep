@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ music.name }}</h1>
+  <h2>{{ music.author }}</h2>
+  
+
+  <audio controls>
+    <source src="{{ music.audio.url }}" type="audio/mpeg">
+  </audio>
+  <br>
+  <a href="{% url 'music_list' %}"><button>Назад к списку</button></a>
+{% endblock %}
