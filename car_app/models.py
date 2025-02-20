@@ -25,6 +25,7 @@ class Car(models.Model):
     color = models.ForeignKey(Color, on_delete=models.PROTECT)
     title = models.CharField(max_length=120)
     model = models.CharField(max_length=120)
+    description = models.TextField()
     year = models.PositiveSmallIntegerField()
     engine_capacity = models.DecimalField(max_digits=3, decimal_places=1)
     odometer = models.PositiveIntegerField()
